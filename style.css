@@ -68,9 +68,13 @@ h1 {
 .loners h2 { color: #c4ba3b; }      /* Жовтуватий */
 .duty h2 { color: #ff3333; }        /* Червоний */
 .freedom h2 { color: #33ff33; }     /* Зелений */
-.monolith { border-left: 10px solid #ffffff; } /* Білий акцент */
+.monolith { color: #ffffff; } /* Білий акцент */
 .mercenaries h2 { color: #3399ff; }  /* Блакитний */
 .scientists h2 { color: #ffa500; }   /* Помаранчевий */
+.clear-sky h2 { color: #00bfff; }   /* Яскраво-блакитний (колір неба) */
+.military h2 { color: #4b5320; }    /* Оливковий/Камуфляжний */
+.bandits h2 { color: #8b4513; }     /* Коричневий/Шкіряний */
+
 
 footer {
     text-align: center;
@@ -79,11 +83,6 @@ footer {
     font-size: 0.8rem;
     color: #666;
 }
-
-/* Кольори нових угруповань */
-.clear-sky h2 { color: #00bfff; }   /* Яскраво-блакитний (колір неба) */
-.military h2 { color: #4b5320; }    /* Оливковий/Камуфляжний */
-.bandits h2 { color: #8b4513; }     /* Коричневий/Шкіряний */
 
 /* Додатковий ефект для Бандитів (опціонально) */
 .bandits:hover {
