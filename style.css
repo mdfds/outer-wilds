@@ -1,0 +1,81 @@
+/* Основні налаштування */
+body {
+    background-color: #1a1a1a;
+    color: #d1d1d1;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                      url('https://images.unsplash.com/photo-1505051508008-923feaf90180?q=80&w=2070'); /* Заглушка під фон */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid #4a4a4a;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff8c00;
+    text-shadow: 2px 2px #000;
+    margin: 0;
+}
+
+/* Сітка карток */
+.factions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Картки угруповань */
+.faction-card {
+    background: rgba(40, 40, 40, 0.9);
+    padding: 25px;
+    border: 2px solid #555;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.faction-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff8c00;
+}
+
+.faction-card h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.motto {
+    display: block;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Кольори для кожного угруповання */
+.loners h2 { color: #c4ba3b; }      /* Жовтуватий */
+.duty h2 { color: #ff3333; }        /* Червоний */
+.freedom h2 { color: #33ff33; }     /* Зелений */
+.monolith { border-left: 10px solid #ffffff; } /* Білий акцент */
+.mercenaries h2 { color: #3399ff; }  /* Блакитний */
+.scientists h2 { color: #ffa500; }   /* Помаранчевий */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    font-size: 0.8rem;
+    color: #666;
+}
