@@ -1,121 +1,143 @@
-/* Основні налаштування */
+/* --- S.T.A.L.K.E.R. PDA СТИЛІ --- */
+
+/* Підключення шрифту Kelly Slab з Google Fonts (дуже схожий на шрифт гри) */
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+/* Змінні кольорів для легкого редагування */
+:root {
+    --bg-dark: #0f0f0f; /* Дуже темний фон */
+    --card-bg: rgba(25, 25, 25, 0.9); /* Трохи світліші картки */
+    --text-primary: #d0d0d0; /* Основний текст (світло-сірий, не білий) */
+    --text-secondary: #ff8c00; /* Помаранчевий для заголовків та акцентів */
+    --text-link: #ffb700; /* Яскравіший помаранчевий для посилань */
+    --border: #333; /* Тонкі рамки */
+}
+
 body {
-    background-color: #1a1a1a;
-    color: #d1d1d1;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Kelly Slab', 'Courier New', Courier, monospace; /* Пріоритет - Kelly Slab */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                      url('https://images.unsplash.com/photo-1505051508008-923feaf90180?q=80&w=2070'); /* Заглушка під фон */
-    background-size: cover;
-    background-attachment: fixed;
+    /* Додаємо ефект ліній екрана */
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
 }
 
 header {
     text-align: center;
     padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid #4a4a4a;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--text-secondary);
 }
 
 h1 {
     font-size: 3rem;
-    color: #ff8c00;
-    text-shadow: 2px 2px #000;
+    color: var(--text-secondary);
     margin: 0;
+    letter-spacing: 2px;
 }
 
-/* Сітка карток */
+header p {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+/* Сітка */
 .factions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Авто-адаптація */
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Картки угруповань */
-.faction-card {
-    background: rgba(40, 40, 40, 0.9);
-    padding: 25px;
-    border: 2px solid #555;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.faction-card:hover {
-    transform: translateY(-10px);
-    border-color: #ff8c00;
-}
-
-.faction-card h2 {
-    margin-top: 0;
-    text-transform: uppercase;
-}
-
-.motto {
-    display: block;
-    margin-top: 15px;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Кольори для кожного угруповання */
-.loners h2 { color: #c4ba3b; }      /* Жовтуватий */
-.duty h2 { color: #ff3333; }        /* Червоний */
-.freedom h2 { color: #33ff33; }     /* Зелений */
-.monolith { color: #ffffff; } /* Білий акцент */
-.mercenaries h2 { color: #3399ff; }  /* Блакитний */
-.scientists h2 { color: #ffa500; }   /* Помаранчевий */
-.clear-sky h2 { color: #00bfff; }   /* Яскраво-блакитний (колір неба) */
-.military h2 { color: #4b5320; }    /* Оливковий/Камуфляжний */
-.bandits h2 { color: #8b4513; }     /* Коричневий/Шкіряний */
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-/* Додатковий ефект для Бандитів (опціонально) */
-.bandits:hover {
-    border-color: #8b4513;
-    box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
-}
-
-/* Додатковий ефект для Чистого Неба */
-.clear-sky:hover {
-    border-color: #00bfff;
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
-}
-
-/* Прибираємо стандартне оформлення посилань для карток */
+/* Картки-посилання */
 .factions-grid a {
-    text-decoration: none;
+    text-decoration: none; /* ПРИБИРАЄМО СИНЄ ПІДКРЕСЛЕННЯ */
     color: inherit;
     display: block;
 }
 
-/* Стиль для напису "Детальніше" */
-.details-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: #ff8c00;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    border-bottom: 1px dashed #ff8c00;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.faction-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Показуємо напис при наведенні на картку */
+/* Ефект наведення на картку */
+.faction-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-secondary);
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.2);
+}
+
+/* Кольори заголовків угруповань */
+.faction-card h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: var(--text-secondary); /* Універсальний помаранчевий */
+    transition: color 0.3s ease;
+}
+
+/* Індивідуальні кольори (опціонально) */
+.loners h2 { color: #c4ba3b; }      /* Жовтуватий */
+.duty h2 { color: #ff3333; }        /* Червоний */
+.freedom h2 { color: #33ff33; }     /* Зелений */
+.monolith h2 { color: #ffffff; }    /* Білий */
+.mercenaries h2 { color: #3399ff; }  /* Блакитний */
+.scientists h2 { color: #ffa500; }   /* Помаранчевий */
+.clear-sky h2 { color: #00bfff; }   /* Світло-блакитний */
+.military h2 { color: #4b5320; }    /* Оливковий */
+.bandits h2 { color: #8b4513; }     /* Коричневий */
+
+/* Текст опису */
+.faction-card p {
+    font-size: 0.95rem;
+    color: #b0b0b0; /* Світло-сірий для опису */
+    margin-bottom: 20px;
+}
+
+/* Гасла (Motto) */
+.motto {
+    display: block;
+    font-style: italic;
+    color: #ff8c00; /* Помаранчевий */
+    font-weight: normal;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+/* Напис "Детальніше..." */
+.details-link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-link);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
 .faction-card:hover .details-link {
-    opacity: 1;
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid var(--border);
 }
