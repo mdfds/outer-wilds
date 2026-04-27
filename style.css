@@ -95,3 +95,27 @@ footer {
     border-color: #00bfff;
     box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
 }
+
+/* Прибираємо стандартне оформлення посилань для карток */
+.factions-grid a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Стиль для напису "Детальніше" */
+.details-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff8c00;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #ff8c00;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Показуємо напис при наведенні на картку */
+.faction-card:hover .details-link {
+    opacity: 1;
+}
