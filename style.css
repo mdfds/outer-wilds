@@ -79,3 +79,20 @@ footer {
     font-size: 0.8rem;
     color: #666;
 }
+
+/* Кольори нових угруповань */
+.clear-sky h2 { color: #00bfff; }   /* Яскраво-блакитний (колір неба) */
+.military h2 { color: #4b5320; }    /* Оливковий/Камуфляжний */
+.bandits h2 { color: #8b4513; }     /* Коричневий/Шкіряний */
+
+/* Додатковий ефект для Бандитів (опціонально) */
+.bandits:hover {
+    border-color: #8b4513;
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+}
+
+/* Додатковий ефект для Чистого Неба */
+.clear-sky:hover {
+    border-color: #00bfff;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
