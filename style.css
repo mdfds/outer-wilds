@@ -120,31 +120,23 @@ header p {
 }
 
 /* КОЛЬОРИ ДЛЯ УГРУПУВАНЬ */
-.loners .color-bar { background: #ffb700; }
+
 .loners h2 { color: #ffb700; }
 
-.duty .color-bar { background: #ff3333; }
 .duty h2 { color: #ff3333; }
 
-.freedom .color-bar { background: #33ff33; }
 .freedom h2 { color: #33ff33; }
 
-.monolith .color-bar { background: #ffffff; }
 .monolith h2 { color: #ffffff; }
 
-.mercenaries .color-bar { background: #3399ff; }
 .mercenaries h2 { color: #3399ff; }
 
-.scientists .color-bar { background: #ffa500; }
 .scientists h2 { color: #ffa500; }
 
-.clear-sky .color-bar { background: #00bfff; }
 .clear-sky h2 { color: #00bfff; }
 
-.military .color-bar { background: #4b5320; }
 .military h2 { color: #4b5320; }
 
-.bandits .color-bar { background: #8b4513; }
 .bandits h2 { color: #8b4513; }
 
 /* СТИЛІ ДЛЯ СТОРІНОК ДОСЬЄ (DETAILS) */
