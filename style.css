@@ -52,11 +52,25 @@ header p {
 /* Сітка */
 .factions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Авто-адаптація */
-    gap: 30px;
-    padding: 60px 40px;
-    max-width: 1400px;
+    /* Змінюємо repeat на фіксоване значення 3 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Додамо адаптивність, щоб на телефонах вони ставали в один ряд */
+@media (max-width: 900px) {
+    .factions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .factions-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Картки-посилання */
